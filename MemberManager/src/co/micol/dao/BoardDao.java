@@ -29,6 +29,12 @@ public class BoardDao extends DAO {
 
 		try {
 			pstmt = conn.prepareStatement(sql);
+			if(id !=0) {
+				pstmt.setInt(1, id);
+			}rs=pstmt.executeQuery();
+		while(rs.next()) {
+			dto=new BoardDto();
+		}
 			
 		} catch (SQLException e) {			
 			e.printStackTrace();

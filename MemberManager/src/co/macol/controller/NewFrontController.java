@@ -12,9 +12,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import co.micol.command.IndexCommand;
+import co.micol.command.member.IdCheckCommand;
+import co.micol.command.member.JoinFormCommand;
+import co.micol.command.member.JoinOkCommand;
 import co.micol.command.member.LoginCommand;
 import co.micol.command.member.LoginOkCommand;
 import co.micol.command.member.LogoutCommand;
+import co.micol.command.member.MemberUpdateCommand;
+import co.micol.command.member.MemberinfoCommand;
+import co.micol.command.member.MemberlistCommand;
+import co.micol.command.notice.NoticelistCommand;
 import co.micol.common.Command;
 
 @WebServlet("/NewFrontController")
@@ -33,11 +40,17 @@ public class NewFrontController extends HttpServlet {
 		cont.put("/login.do", new LoginCommand());
 		cont.put("/loginOk.do", new LoginOkCommand());
 		cont.put("/logout.do", new LogoutCommand());
-//		cont.put("/index.do", new IndexCommand());
-//		cont.put("/index.do", new IndexCommand());
-//		cont.put("/index.do", new IndexCommand());
-//		cont.put("/index.do", new IndexCommand());
-//		cont.put("/index.do", new IndexCommand());
+		cont.put("/joinForm.do", new JoinFormCommand());
+		cont.put("/idCheck.do", new IdCheckCommand());
+		cont.put("/joinOk.do", new JoinOkCommand());
+		cont.put("/memberinfo.do", new MemberinfoCommand());
+		cont.put("/memberlist.do", new MemberlistCommand());		
+		cont.put("/noticelist.do", new NoticelistCommand());
+		cont.put("/memberUpdate.do", new MemberUpdateCommand());
+//		cont.put("/updateOk.do", new updateOkCommand());
+//		cont.put("/memberUpdate.do", new MemberUpdateCommand());
+//		cont.put("/memberUpdate.do", new MemberUpdateCommand());
+		
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
