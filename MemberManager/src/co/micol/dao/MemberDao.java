@@ -99,8 +99,8 @@ public class MemberDao extends DAO {
 	//
 	public int update(MemberDto dto) {
 		int n = 0;
-		int cnt = 0;
-		String sql = "UPDATE member set MEM_NAME =?,mem_pw =?',mem_addr=?, mem_tel=?" + "where mem_id =?";
+		int cnt = 1;
+		String sql = "UPDATE MEMBER set MEM_NAME =?,MEM_PW =?,MEM_ADDR=?, MEM_TEL=? where MEM_ID =?";
 
 		try {
 			pstmt = conn.prepareStatement(sql);

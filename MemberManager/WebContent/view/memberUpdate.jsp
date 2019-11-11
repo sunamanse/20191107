@@ -30,7 +30,7 @@
 							<td>${dto.id }</td>
 							<td><input type="text" id="name" name="name"></td>
 							<td><input type="password" id="pw" name="pw"></td>
-							<td>${dto.eDate }</td>
+							<td><input type="date" id="edate" name="edate" value="${dto.eDate }"></td>
 							<td><input type="text" id="addr" name="addr"></td>
 							<td><input type="text" id="tel" name="tel"></td>
 						</tr>
